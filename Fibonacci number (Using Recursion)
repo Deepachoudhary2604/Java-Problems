@@ -1,0 +1,13 @@
+class Main {
+    public static void main(String[] args) {
+        int n=8;
+        int ans=fibo(n,0,1);
+        System.out.println(ans);
+    }
+    public static int fibo(int n,int a,int b){
+        if(n==0){
+            return a;
+        }
+        return fibo(n-1,b,a+b);
+    }
+}
