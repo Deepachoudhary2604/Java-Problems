@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+        String str="helloolle";
+        char[] arr = str.toCharArray();
+        int s=0;
+        int e=str.length()-1;
+        boolean check=palindrome(arr,s,e);
+        System.out.println(check);
+    }
+    public static boolean palindrome(char[] arr,int s,int e){
+       if(arr[s]!=arr[e]){
+           return false;
+       }
+       if(s>=e){
+           return true;
+       }
+       return palindrome(arr,s+1,e-1);
+    }
+}
