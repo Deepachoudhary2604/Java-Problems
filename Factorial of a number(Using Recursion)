@@ -1,0 +1,14 @@
+class Main {
+    public static void main(String[] args) {
+        int n=5;
+        int fact=1;
+        int ans=fac(n,fact);
+        System.out.println(ans);
+    }
+    public static int fac(int n,int fact){
+        if(n==0){
+            return fact;
+        }
+        return  fac(n-1,fac*n);
+    }
+}
